@@ -1,6 +1,6 @@
 # overpass-wrapper
 
-This is a simple wrapper around the command line utility named osm2s_query that ships with Overpass API. 
+This is a simple wrapper around the command line utility named `osm3s_query` that ships with Overpass API. 
 
 It can be used like this:
 
@@ -15,3 +15,6 @@ It can be used like this:
 
     overpass_wrapper.overpassQuery('[out:json]; relation["name"="Firenze"]["type"="boundary"];out geom;', '/opt/overpass/db', callback );
 `
+
+The `osm3s_query` executable must be in the path.
+
