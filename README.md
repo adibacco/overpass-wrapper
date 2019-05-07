@@ -4,14 +4,14 @@ This is a simple wrapper around the command line utility named osm2s_query that 
 
 It can be used like this:
 
-`
-const overpass_wrapper = require('overpass-wrapper');
+
+    const overpass_wrapper = require('overpass-wrapper');
 
 
-function callback(result, err) {
+    function callback(result, err) {
 
-    console.log(result);
-}
+        console.log(result);
+    }
 
-overpass_wrapper.overpassQuery('[out:json]; relation["name"="Firenze"]["type"="boundary"];out geom;', '/opt/overpass/db', callback );
+    overpass_wrapper.overpassQuery('[out:json]; relation["name"="Firenze"]["type"="boundary"];out geom;', '/opt/overpass/db', callback );
 `
