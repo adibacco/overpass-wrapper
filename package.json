@@ -1,0 +1,24 @@
+{
+  "name": "overpass-wrapper",
+  "version": "1.0.0",
+  "description": "A simple wrapper to call osm3s_query native binary and get the response in chunks",
+  "main": "overpass-wrapper",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adibacco/overpass-wrapper.git"
+  },
+  "keywords": [
+    "overpass",
+    "wrapper",
+    "osm3s_query"
+  ],
+  "author": "Antonio Di Bacco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adibacco/overpass-wrapper/issues"
+  },
+  "homepage": "https://github.com/adibacco/overpass-wrapper#readme"
+}
