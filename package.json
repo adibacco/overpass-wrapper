@@ -1,6 +1,6 @@
 {
   "name": "overpass-wrapper",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A simple wrapper to call osm3s_query native binary and get the response in chunks",
   "main": "overpass-wrapper",
   "scripts": {
