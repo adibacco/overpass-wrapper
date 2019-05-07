@@ -1,5 +1,5 @@
 
-function overpass_query(query, db, callback)  {
+function overpassQuery(query, db, callback)  {
     const spawn = require('child_process').spawn;
 
     let osm3s = spawn("osm3s_query", [ `--db-dir=${db}` ], {stdio: ['pipe', 'pipe', 'pipe']});
@@ -28,11 +28,10 @@ function overpass_query(query, db, callback)  {
 
 };
 
-module.exports = overpass_query;
+module.exports.overpassQuery = overpassQuery;
 
 
 //overpass_query('[out:json]; relation["name"="Firenze"]["type"="boundary"];out geom;', '/opt/overpass/db', callBack );
-
 
 
 
