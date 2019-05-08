@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/adibacco/overpass-wrapper/issues"
   },
-  "homepage": "https://github.com/adibacco/overpass-wrapper#readme"
+  "homepage": "https://github.com/adibacco/overpass-wrapper#readme",
+  "dependencies": {
+    "osmtogeojson": "^3.0.0-beta.3"
+  }
 }

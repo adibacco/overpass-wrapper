@@ -1,4 +1,7 @@
 
+const osmtogeojson = require('osmtogeojson');
+
+
 function overpassQuery(query, db, callback)  {
     const spawn = require('child_process').spawn;
 
@@ -19,7 +22,7 @@ function overpassQuery(query, db, callback)  {
     });
 
     osm3s.on('close', function(code) {
-        return callback(result, err);
+        return callback(JSON.parse(result), err);
     });
 
     
@@ -28,10 +31,19 @@ function overpassQuery(query, db, callback)  {
 
 };
 
+
+function overpassQueryGeoJSON(query, db, callback, options) {
+    overpassQuery(query, db, (jsonObject, err) => { 
+        callback(osmtogeojson(jsonObject, options), err);
+    });
+
+};
+
 module.exports.overpassQuery = overpassQuery;
+module.exports.overpassQueryGeoJSON = overpassQueryGeoJSON;
 
+//overpassQuery('[out:json]; relation["name"="Firenze"]["type"="boundary"];out geom;', '/opt/overpass/db', callBack );
 
-//overpass_query('[out:json]; relation["name"="Firenze"]["type"="boundary"];out geom;', '/opt/overpass/db', callBack );
-
+//overpassQueryJSON('[out:json]; relation["name"="Firenze"]["type"="boundary"];out geom;', '/opt/overpass/db', callBack );
 
 
